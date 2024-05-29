@@ -14,61 +14,61 @@ pipelines:
     secure_variables:
       SSH_PASSWORD: "AES:A+nXq97UPxer7CvBVvfQmQ==:AC+fXAbWrpsx+SG5sdFNkg=="
     stages:
-      - DEV:
-          fetch_materials: true
-          environment_variables:
-            env: dev
-          approval:
-            type: manual
-          jobs:
-            ansible:
-              timeout: 0
-              tasks:
-              - exec:
-                  arguments:
-                  - run.sh
-                  command: bash
+    - DEV:
+        fetch_materials: true
+        environment_variables:
+          env: dev
+        approval:
+          type: manual
+        jobs:
+          ansible:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - run.sh
+                command: bash
 
-      - QA:
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible:
-              timeout: 0
-              tasks:
-              - exec:
-                  arguments:
-                  - -l
-                  command: ls
-                  run_if: passed
+    - QA:
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - -l
+                command: ls
+                run_if: passed
 
-      - STAGE:
-          fetch_materials: true
-          approval:
-            type: manual
-          jobs:
-            ansible:
-              timeout: 0
-              tasks:
-              - exec:
-                  arguments:
-                  - -l
-                  command: ls
-                  run_if: passed
+    - STAGE:
+        fetch_materials: true
+        approval:
+          type: manual
+        jobs:
+          ansible:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - -l
+                command: ls
+                run_if: passed
 
-      - PROD:
-          fetch_materials: true
-          environment_variables:
-            env: prod
-          approval:
-            type: manual
-          jobs:
-            ansible:
-              timeout: 0
-              tasks:
-              - exec:
-                  arguments:
-                  - run.sh
-                  command: bash
-                  run_if: passed
+    - PROD:
+        fetch_materials: true
+        environment_variables:
+          env: prod
+        approval:
+          type: manual
+        jobs:
+          ansible:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - run.sh
+                command: bash
+                run_if: passed
