@@ -13,8 +13,8 @@ pipelines:
         branch: main
     secure_variables:
       SSH_PASSWORD: "AES:A+nXq97UPxer7CvBVvfQmQ==:AC+fXAbWrpsx+SG5sdFNkg=="
-      environment_variables:
-        Component: backend
+    environment_variables:
+      component: backend
     stages:
       - DEV:
           fetch_materials: true
