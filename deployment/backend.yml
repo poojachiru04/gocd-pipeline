@@ -32,7 +32,7 @@ pipelines:
                 - env=dev
                 - role_name=backend
                 - expense.yml
-                command: ansible_playbook
+                command: ansible-playbook
 
     - QA:
        fetch_materials: true
@@ -82,7 +82,7 @@ pipelines:
                     - env=prod
                     - role_name=backend
                     - expense.yml
-                  command: ansible_playbook
+                  command: ansible-playbook
 
 
 
