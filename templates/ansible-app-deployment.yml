@@ -24,10 +24,10 @@ pipelines:
             ansible:
               timeout: 0
               tasks:
-                - exec:
-                    arguments:
-                      - run.sh
-                    command: bash
+              - exec:
+                  arguments:
+                  - run.sh
+                  command: bash
 
       - QA:
           fetch_materials: true
@@ -37,11 +37,11 @@ pipelines:
             ansible:
               timeout: 0
               tasks:
-                - exec:
-                    arguments:
-                      - -l
-                    command: ls
-                    run_if: passed
+              - exec:
+                  arguments:
+                  - -l
+                  command: ls
+                  run_if: passed
 
       - STAGE:
           fetch_materials: true
@@ -51,11 +51,11 @@ pipelines:
             ansible:
               timeout: 0
               tasks:
-                - exec:
-                    arguments:
-                      - -l
-                    command: ls
-                    run_if: passed
+              - exec:
+                  arguments:
+                  - -l
+                  command: ls
+                  run_if: passed
 
       - PROD:
           fetch_materials: true
@@ -67,8 +67,8 @@ pipelines:
             ansible:
               timeout: 0
               tasks:
-                - exec:
-                    arguments:
-                      - run.sh
-                    command: bash
-                    run_if: passed
+              - exec:
+                  arguments:
+                  - run.sh
+                  command: bash
+                  run_if: passed
