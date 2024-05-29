@@ -12,7 +12,7 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      SSH_PASSWORD:  "AES:A+nXq97UPxer7CvBVvfQmQ==:AC+fXAbWrpsx+SG5sdFNkg=="
+      SSH_PASSWORD: "AES:A+nXq97UPxer7CvBVvfQmQ==:AC+fXAbWrpsx+SG5sdFNkg=="
     environment_variables:
       pipeline: "true"
     stages:
