@@ -11,6 +11,8 @@ pipelines:
         shallow_clone: true
         auto_update: true
         branch: main
+    secure_variables:
+      SSH_PASSWORD: "AES:A+nXq97UPxer7CvBVvfQmQ==:AC+fXAbWrpsx+SG5sdFNkg=="
     environment_variables:
       component: mysql
     stages:
