@@ -21,7 +21,7 @@ pipelines:
             terraform:
               tasks:
               - exec: { command: terraform , arguments: ["init", "-backend-config", "env-dev/state.tfvars"] }
-              - exec: { command: terraform , arguments: ["apply", "-var-file", "env-dev/state.tfvars","-auto-approve"] }
+              - exec: { command: terraform , arguments: ["apply", "-var-file", "env-dev/main.tfvars","-auto-approve"] }
 
 
       - PROD:
@@ -32,4 +32,4 @@ pipelines:
             terraform:
               tasks:
                 - exec: { command: terraform , arguments: ["init", "-backend-config", "env-prod/state.tfvars"] }
-                - exec: { command: terraform , arguments: ["apply", "-var-file", "env-prod/state.tfvars","-auto-approve"] }
+                - exec: { command: terraform , arguments: ["apply", "-var-file", "env-prod/main.tfvars","-auto-approve"] }
