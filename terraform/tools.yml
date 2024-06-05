@@ -1,0 +1,25 @@
+format_version: 10
+pipelines:
+  tools-create:
+    group: Terraform
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-a66247d:
+        git: https://github.com/raghudevopsb79/tools-automation
+        shallow_clone: true
+        auto_update: true
+        branch: main
+    secure_variables:
+      SSH_PASSWORD: "AES:GJpOsKchZolqf2Gylrqymw==:48C77QmHmE7ihFUNFmoXRw=="
+    stages:
+      - create:
+          fetch_materials: true
+          environment_variables: { env: dev }
+          approval: {type: manual}
+          jobs:
+            terraform:
+              tasks:
+                - exec: { command: terraform , arguments: [ "init"] }
+                - exec: { command: terraform , arguments: [ "apply", "-auto-approve"] }
