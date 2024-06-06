@@ -1,0 +1,29 @@
+format_version: 10
+pipelines:
+  vault:
+    group: Tools
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-a66247d:
+        git: https://github.com/poojachiru04/tools-automation
+        shallow_clone: true
+        auto_update: true
+        branch: main
+    secure_variables:
+      SSH_PASSWORD: "AES:tSqXqpp11OV5Z6PcJPidrQ==:jC4ih8+cvxnKZSnGZ0TAQA=="
+      environment_variables:
+        tool_name: vault
+    stages:
+      - create:
+          fetch_materials: true
+          approval: {type: manual}
+          jobs:
+           ansible:
+             timeout: 0
+             tasks:
+             - exec:
+                command: bash
+                arguments:
+                - setup-tool-service.sh
