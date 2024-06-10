@@ -12,8 +12,8 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      SSH_PASSWORD: "AES:tSqXqpp11OV5Z6PcJPidrQ==:jC4ih8+cvxnKZSnGZ0TAQA=="
-      vault_token: "AES:X5NBbN1EfeGEv5tjclU7aw==:1lyQLDxc2NmEuEWe5Q1zZwRXvRyWiLzhYgZSRxOwJK8="
+      SSH_PASSWORD: "AES:cq7xYqZCqw7+zxTJqHhbpg==:E7Ddrn3rEX2o58fsHNpGfQ=="
+      vault_token: "AES:ajto9pfFdVcv7RBAD9papA==:p19FP42BOGtBx8rEx73OA0M6N4jfvk7lRu7ivnMQvH0="
     environment_variables:
       component: mysql
     stages:
