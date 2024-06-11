@@ -6,7 +6,7 @@ pipelines:
     lock_behavior: none
     display_order: -1
     materials:
-      git-a66247d:
+      git-92bef6d:
         git: https://github.com/poojachiru04/tools-automation
         shallow_clone: true
         auto_update: true
