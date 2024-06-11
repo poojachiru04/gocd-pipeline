@@ -12,7 +12,7 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      SSH_PASSWORD: "AES:x/vTGdWg9PzxphcDFDWgag==:p1U/Wuzk/pbSnPB1MYIUdA=="
+      SSH_PASSWORD: "AES:PqMlNf17hd57NXpU4jhXhA==:h9RwvNdy72k1uBBOXka1Mg=="
       vault_token: "AES:ajto9pfFdVcv7RBAD9papA==:p19FP42BOGtBx8rEx73OA0M6N4jfvk7lRu7ivnMQvH0="
     environment_variables:
       tool_name: prometheus
@@ -21,10 +21,10 @@ pipelines:
           fetch_materials: true
           approval: {type: manual}
           jobs:
-           ansible:
-             timeout: 0
-             tasks:
-             - exec:
-                command: bash
-                arguments:
-                - setup-tool-service.sh
+            ansible:
+              timeout: 0
+              tasks:
+                - exec:
+                    command: bash
+                    arguments:
+                      - setup-tool-service.sh
