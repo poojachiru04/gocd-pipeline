@@ -21,10 +21,10 @@ pipelines:
           fetch_materials: true
           approval: {type: manual}
           jobs:
-            ansible:
-              timeout: 0
-              tasks:
-                - exec:
-                    command: bash
-                    arguments:
-                      - setup-tool-service.sh
+           ansible:
+             timeout: 0
+             tasks:
+             - exec:
+                command: bash
+                arguments:
+                - setup-tool-service.sh
