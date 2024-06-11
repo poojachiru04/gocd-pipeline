@@ -12,9 +12,8 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      SSH_PASSWORD: "AES:+iKvYytlSGaxJv4bpPa8yQ==:e3KorCZC9P2ivaxcrLysDg=="
-      vault_token: "AES:ajto9pfFdVcv7RBAD9papA==:p19FP42BOGtBx8rEx73OA0M6N4jfvk7lRu7ivnMQvH0="
-
+      SSH_PASSWORD: "AES:PqMlNf17hd57NXpU4jhXhA==:h9RwvNdy72k1uBBOXka1Mg=="
+      vault_token: "AES:cL3SIHN1lyiGbPVkw+0mgQ==:WKa1kgGkqtrVfM/n53I8LcW9P6ibNWicX1OA/gusT0E="
     stages:
       - create:
           fetch_materials: true
