@@ -12,7 +12,7 @@ pipelines:
         auto_update: true
         branch: main
     secure_variables:
-      SSH_PASSWORD: ""AES:+iKvYytlSGaxJv4bpPa8yQ==:e3KorCZC9P2ivaxcrLysDg==
+      SSH_PASSWORD: "AES:+iKvYytlSGaxJv4bpPa8yQ==:e3KorCZC9P2ivaxcrLysDg=="
       vault_token: "AES:ajto9pfFdVcv7RBAD9papA==:p19FP42BOGtBx8rEx73OA0M6N4jfvk7lRu7ivnMQvH0="
     environment_variables:
       component: frontend
