@@ -1,0 +1,29 @@
+format_version: 10
+pipelines:
+  grafana:
+    group: Tools
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-92bef6d:
+        git: https://github.com/poojachiru04/tools-automation
+        shallow_clone: true
+        auto_update: true
+        branch: main
+    secure_variables:
+      SSH_PASSWORD: "AES:+iKvYytlSGaxJv4bpPa8yQ==:e3KorCZC9P2ivaxcrLysDg=="
+    environment_variables:
+      tool_name: grafana
+    stages:
+      - create:
+          fetch_materials: true
+          approval: {type: manual}
+          jobs:
+            ansible:
+              timeout: 0
+              tasks:
+                - exec:
+                    command: bash
+                    arguments:
+                      - setup-tool-service.sh
