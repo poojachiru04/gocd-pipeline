@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  expense-destory:
+  expense-destroy:
     group: Terraform
     label_template: ${COUNT}
     lock_behavior: none
@@ -17,7 +17,7 @@ pipelines:
     stages:
       - DEV:
           fetch_materials: true
-          environment_variables: { env: dev, action: destory }
+          environment_variables: { env: dev, action: destroy }
           approval: {type: manual}
           jobs:
             terraform:
@@ -28,7 +28,7 @@ pipelines:
 
       - PROD:
           fetch_materials: true
-          environment_variables: { env: prod, action: destory }
+          environment_variables: { env: prod, action: destroy }
           jobs:
             terraform:
               tasks:
