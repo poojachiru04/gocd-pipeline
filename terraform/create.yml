@@ -17,18 +17,16 @@ pipelines:
     stages:
       - DEV:
           fetch_materials: true
-          environment_variables: { env: dev }
+          environment_variables: { env: dev, action: apply }
           approval: {type: manual}
           jobs:
             terraform:
               tasks:
               - exec: { command: bash, arguments: ["run.sh"] }
 
-
-
       - PROD:
           fetch_materials: true
-          environment_variables: { env: prod }
+          environment_variables: { env: prod, action: apply }
           approval: {type: manual}
           jobs:
             terraform:
