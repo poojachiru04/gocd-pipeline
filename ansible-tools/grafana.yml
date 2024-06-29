@@ -13,7 +13,7 @@ pipelines:
         branch: main
     secure_variables:
       SSH_PASSWORD: "AES:GyXHWL0gRxZv2QFeUyYZVg==:FXeg4RTJXVaTeIq73zDqKw=="
-      vault_token: "AES:ajto9pfFdVcv7RBAD9papA==:p19FP42BOGtBx8rEx73OA0M6N4jfvk7lRu7ivnMQvH0="
+      vault_token: "AES:TbWft/l7DJgukUaa2RYENQ==:Od+5ZJ8FyKsH1t/Eg9MCS3BmTeblwUCwlLx6gfDrZaU="
     environment_variables:
       tool_name: grafana
     stages:
