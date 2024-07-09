@@ -13,7 +13,6 @@ pipelines:
         branch: main
     secure_variables:
       SSH_PASSWORD: "AES:AMnwnyBhoxJTsf/hDA5+2A==:4BBYnccUHTBMF8Nwyi2llg=="
-      vault_token: "AES:TbWft/l7DJgukUaa2RYENQ==:Od+5ZJ8FyKsH1t/Eg9MCS3BmTeblwUCwlLx6gfDrZaU="
     environment_variables:
       tool_name: vault
     stages:
