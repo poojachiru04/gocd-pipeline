@@ -1,0 +1,30 @@
+format_version: 10
+pipelines:
+  sonarqube:
+    group: Tools
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-92bef6d:
+        git: https://github.com/poojachiru04/tools-automation
+        shallow_clone: true
+        auto_update: true
+        branch: main
+    secure_variables:
+      SSH_PASSWORD: "AES:gByoteIR3R19U/x5M7a4oQ==:hzJuwlaTrq6Bna5gLndagg=="
+      vault_token: "AES:TbWft/l7DJgukUaa2RYENQ==:Od+5ZJ8FyKsH1t/Eg9MCS3BmTeblwUCwlLx6gfDrZaU="
+    environment_variables:
+      tool_name: sonarqube
+    stages:
+      - create:
+          fetch_materials: true
+          approval: {type: manual}
+          jobs:
+            ansible:
+              timeout: 0
+              tasks:
+                - exec:
+                    command: bash
+                    arguments:
+                      - setup-tool-service.sh
