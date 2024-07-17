@@ -13,7 +13,7 @@ pipelines:
         branch: main
     secure_variables:
       SSH_PASSWORD: "AES:gByoteIR3R19U/x5M7a4oQ==:hzJuwlaTrq6Bna5gLndagg=="
-      vault_token: "AES:TbWft/l7DJgukUaa2RYENQ==:Od+5ZJ8FyKsH1t/Eg9MCS3BmTeblwUCwlLx6gfDrZaU="
+      vault_token: "AES:ICgqyPiLyIRryboee7PT3A==:jMG7B5dSPNIgy1yyNWclxaVofEXrBU6ELtmkQir6NZo="
     environment_variables:
       tool_name: elk
     stages:
